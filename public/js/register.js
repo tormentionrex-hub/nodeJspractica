@@ -14,7 +14,7 @@ export function register() {
     const confirmPassword = confirmPasswordInput.value;
 
 
-    // 2. Validaciones básicas antes de procesar datos
+    // Validaciones básicas antes de procesar datos
 
     // Verificar que ningún campo esté vacío
     if (!name || !email || !password || !confirmPassword) {
@@ -29,7 +29,7 @@ export function register() {
         return;
     }
 
-    // 3. Gestión de almacenamiento local (LocalStorage)
+    // Gestión de almacenamiento local (LocalStorage)
 
     // Obtener la lista de usuarios guardados previamente.
     // Usamos la clave "users" para que coincida con lo que espera el login (data.js)
@@ -42,14 +42,14 @@ export function register() {
         return;
     }
 
-    // 5. Guardar el nuevo usuario
+    //  Guardar el nuevo usuario
     // Agregamos un objeto con los datos del nuevo usuario al arreglo
     usuarios.push({ name, email, password });
 
     // Guardamos el arreglo actualizado en localStorage "users".
     localStorage.setItem("users", JSON.stringify(usuarios));
 
-    // 6. Confirmación y redirección
+    // Confirmación y redirección
     // Mostrar mensaje de éxito y esperar a que el usuario cierre la alerta o pase un momento
     Swal.fire("Éxito", "Registro completado", "success").then(() => {
         // Redirigir al usuario a la página de inicio de sesión

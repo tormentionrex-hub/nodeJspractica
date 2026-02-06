@@ -3,11 +3,11 @@ import { getUsers } from "./data.js";
 // Función de inicio de sesión
 // Se asigna también a window.login para asegurar que el botón del HTML pueda llamarla
 window.login = function () {
-  // 1. Obtener valores del formulario y limpiar espacios
+  // Obtener valores del formulario y limpiar espacios
   const email = document.getElementById("loginEmail").value.trim();
   const password = document.getElementById("loginPassword").value.trim();
 
-  // 2. Validación básica: verificar campos vacíos
+  // Validación básica: verificar campos vacíos
   if (!email || !password) {
     Swal.fire({
       icon: "warning",
@@ -18,11 +18,11 @@ window.login = function () {
     return;
   }
 
-  // 3. Obtener usuarios guardados (desde data.js / localStorage)
+  // Obtener usuarios guardados (desde data.js / localStorage)
   const users = getUsers();
   let userFound = false;
 
-  // 4. Buscar coincidencia de credenciales
+  //  Buscar coincidencia de credenciales
   // Recorremos el arreglo de usuarios buscando uno que tenga el mismo email y password
   for (let i = 0; i < users.length; i++) {
     if (users[i].email === email && users[i].password === password) {
@@ -43,7 +43,7 @@ window.login = function () {
     }
   }
 
-  // 5. Manejo de error si no se encontró el usuario
+  //  Manejo de error si no se encontró el usuario
   if (!userFound) {
     Swal.fire({
       icon: "error",
