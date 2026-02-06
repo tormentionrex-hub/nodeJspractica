@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <!-- CSS desde public/styles -->
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/register.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <h2>MusicZone</h2>
+  </nav>
+
+  <main class="register-container">
+    <div class="register-box">
+      <h2>Regístrate</h2>
+
+      <input type="text" id="registerName" placeholder="Nombre completo">
+      <input type="email" id="registerEmail" placeholder="Email">
+      <input type="password" id="registerPassword" placeholder="Contraseña">
+      <input type="password" id="registerConfirmPassword" placeholder="Confirmar Contraseña">
+
+      <button onclick="register()">Registrarse</button>
+
+      <p>¿Ya tienes cuenta?
+        <a href="/login">Inicia sesión</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <small>© 2026 MusicZone</small>
+    </div>
+  </footer>
+
+  <!-- Librería SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- JS desde public/js -->
+  <script type="module" src="/js/register.js"></script>
+</body>
+
+</html>

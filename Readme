@@ -1,0 +1,43 @@
+// ================= CONFIGURACIÓN DEL SERVIDOR =================
+// En el archivo llamado "server.js" se define la configuración base del servidor
+// que utiliza Express para servir la aplicación.
+//  Una vez configurado, NO debe modificarse sin autorización.
+// =============================================================
+
+// Se importa el framework Express para crear el servidor
+const express = require('express');
+
+// Se importa el módulo path para manejar rutas de archivos de forma segura
+const path = require('path');
+
+// Se crea la instancia de la aplicación Express
+const app = express();
+
+// ---------------- ARCHIVOS ESTÁTICOS ----------------
+// Se configura Express para servir archivos estáticos (HTML, CSS, JS, imágenes)
+// desde la carpeta "public"
+app.use(express.static(path.join(__dirname, 'public')));
+
+// ---------------- RUTA PRINCIPAL ----------------
+// Cuando el usuario accede a la raíz del sitio ("/"),
+// se envía el archivo index.html ubicado en public/pages
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
+});
+
+// ---------------- PUERTO DEL SERVIDOR ----------------
+// Puerto estándar donde se ejecuta el servidor
+const PORT = 3000;
+
+
+
+
+
+// Uso del "/"" en las rutas
+
+// El / indica la ruta principal del servidor.
+// Cuando se usa en un enlace como /login, el navegador siempre va directo a esa
+// ruta desde la raíz del proyecto, sin importar en qué página esté el usuario.
+
+// Esto se usa así porque Express define sus rutas desde la raíz y evita errores con
+// rutas relativas.

@@ -1,0 +1,172 @@
+/* 
+  Se eliminan los márgenes y rellenos por defecto del navegador
+  para evitar diferencias visuales entre navegadores.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Se define la altura completa de la página y una fuente base
+  para todo el sitio.
+*/
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* 
+  El body se configura como un contenedor flexible en columna
+  para permitir que el footer se mantenga en la parte inferior
+  de la pantalla cuando hay poco contenido.
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1b102f; /* color de fondo morado oscuro */
+}
+
+/* 
+  Barra de navegación superior.
+  Se utiliza flexbox para alinear el logo y los enlaces
+  de forma horizontal.
+*/
+.navbar {
+  background-color: #5b2d8b;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 
+  Lista de redirecciones del navbar
+  Se organiza de forma horizontal usando flexbox.
+*/
+.navbar ul {
+  list-style: none;      /* elimina los puntos */
+  display: flex;         /* coloca las redirecicones en una fila */
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Espaciado entre las opciones del menú.
+*/
+.navbar li {
+  margin-left: 20px;
+}
+
+
+
+
+/* 
+  Estilo de los enlaces del menú de navegación.
+*/
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* 
+  Efecto visual al pasar el cursor sobre los enlaces.
+*/
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* 
+  Contenedor principal del contenido.
+  La propiedad flex: 1 permite que este bloque ocupe
+  el espacio disponible y empuje el footer hacia abajo.
+*/
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* 
+  Estilos del encabezado principal de la página.
+*/
+.hero h1 {
+  color: #f2eaff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #d6cfff;
+  margin-bottom: 40px;
+}
+
+/* 
+  Sección donde se muestran los géneros musicales.
+*/
+.music-section h2 {
+  color: #f2eaff;
+  margin-bottom: 20px;
+}
+
+/* 
+  Contenedor de tarjetas de música.
+  Se utiliza flexbox para distribuir las tarjetas
+  de forma horizontal con espacio entre ellas.
+*/
+.music-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 
+  Tarjeta individual de género musical.
+*/
+.card {
+  background-color: #2a1858;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* 
+  Título de cada tarjeta.
+*/
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* 
+  Pie de página.
+  Se utiliza un color que combina con el navbar
+  y el fondo general de la página.
+*/
+.footer {
+  background-color: #241447;
+  color: #e0d9ff;
+  padding: 30px 20px;
+}
+
+/* 
+  Contenido principal del footer distribuido en columnas.
+*/
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 
+  Texto inferior del footer.
+*/
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.8;
+}

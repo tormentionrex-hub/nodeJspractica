@@ -1,0 +1,88 @@
+/* 
+  Contenedor principal del login.
+  Se centra el formulario vertical y horizontalmente
+  usando flexbox para una mejor experiencia visual.
+*/
+.login-container {
+  min-height: calc(100vh - 120px); /* resta navbar + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+  Caja del formulario.
+  Usa un color morado intermedio para contrastar
+  con el fondo general de la página.
+*/
+.login-box {
+  background-color: #2a1858;
+  padding: 30px;
+  width: 320px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 
+  Título del login.
+*/
+.login-box h2 {
+  color: #f2eaff;
+  margin-bottom: 20px;
+}
+
+/* 
+  Campos de entrada.
+  Se elimina el borde por defecto y se suaviza el diseño.
+*/
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* 
+  Botón principal.
+  Usa el mismo color del navbar para mantener coherencia visual.
+*/
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5b2d8b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* 
+  Efecto hover del botón.
+*/
+.login-box button:hover {
+  background-color: #6f3fb1;
+}
+
+/* 
+  Texto inferior con enlace a registro.
+*/
+.login-box p {
+  color: #d6cfff;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* 
+  Enlace de registro.
+*/
+.login-box a {
+  color: #c9b6ff;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
